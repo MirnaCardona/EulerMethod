@@ -30,7 +30,7 @@ int main(void){
     
     for(cont = 0; cont <= tiempo; cont ++){
         start = clock();
-        //equ(tiempo,k,masa,cont);
+        //resultado = equ(tiempo,k,masa,cont);
         stop = clock();
         cpu_time = (stop-start)*1e3 ;
         
