@@ -19,14 +19,7 @@
     #define EXTERN extern
 #endif
 
-/*
- * @function
- *      main
- * @params
- *      none
- * @return
- *      none
- */
+
 
 
 #endif /* main_h */
