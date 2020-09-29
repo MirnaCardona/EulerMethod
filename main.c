@@ -6,7 +6,7 @@
 //
 
 #include "main.h"
-//#include "files.h"
+#include "files.h"
 //#include "equations.h"
 
 
@@ -30,13 +30,12 @@ int main(void){
     
     for(cont = 0; cont <= tiempo; cont ++){
         start = clock();
-        //resultado = equ(tiempo,k,masa,cont);
+        //resultado = equ(k,masa,cont);
         stop = clock();
         cpu_time = (stop-start)*1e3 ;
         
-        //imprimir(cont,cpu_time,resultado,arch1,arch2);
-        //fprintf(arch1, "\n%d, %f", cont, cpu_time);
-        //fprintf(arch2, "\n%d, %f", cont, resultado);
+        imprimir(cont,cpu_time,resultado,arch1,arch2);
+        
     }
     fclose(arch1);
     fclose(arch2);
