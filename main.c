@@ -7,7 +7,7 @@
 
 #include "main.h"
 #include "files.h"
-//#include "equations.h"
+#include "equations.h"
 
 
 int main(void){
@@ -30,7 +30,7 @@ int main(void){
     
     for(cont = 0; cont <= tiempo; cont ++){
         start = clock();
-        //resultado = equ(k,masa,cont);
+        resultado = equ(k,masa,cont);
         stop = clock();
         cpu_time = (stop-start)*1e3 ;
         

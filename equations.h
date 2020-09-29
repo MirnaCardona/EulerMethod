@@ -22,8 +22,8 @@
  */
 
 /* Constants declarations. */
-#DEFINE GRAVEDAD 9.81
-#DEFINE DT 1
+#define GRAVEDAD 9.81
+#define DT 1
 /* Set EXTERN macro: */
 
 #ifndef equations_IMPORT

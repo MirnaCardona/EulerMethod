@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "equations.h"
+#include "main.h"
 
 double equations_fuerzas(int masa, int Dt, int K, double xt)
 {
