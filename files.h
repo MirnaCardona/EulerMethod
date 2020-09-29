@@ -29,6 +29,7 @@
  * @return void
  */
 
-EXTERN void imprimir(int cont,double cpu_time,double res,FILE * arch1, FILE * arch2);
+EXTERN void imprimircpu(int cont,double cpu_time,FILE * arch);
+EXTERN void imprimirres(int cont,double res,FILE * arch);
 
 #endif /* files_h */
