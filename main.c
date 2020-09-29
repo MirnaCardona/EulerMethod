@@ -12,7 +12,7 @@
 
 int main(void){
     FILE * arch1, arch2;
-    double tiempo,k,masa,cpu_time,resultado, ant1, ant2;
+    double tiempo,k,masa,cpu_time,resultado[], ant1=0, ant2=0;
     float cont;
     clock_t start, stop;
     
@@ -28,11 +28,14 @@ int main(void){
     scanf("%dc",&k);
     
     
-    for(cont = 0; cont <= tiempo; cont ++){
+    for(cont = 0; cont <= tiempo *(1/DT); cont ++){
+        
         start = clock();
-        resultado = equ(k,masa,(cont/10));
+        resultado[cont] = equ(k,masa,(cont*DT), ant1, ant2);
         stop = clock();
         cpu_time = (stop-start)*1e3 ;
+        ant2=ant1;
+        ant1=resultado[cont];
         
         imprimircpu(cont,cpu_time,arch1);
         
