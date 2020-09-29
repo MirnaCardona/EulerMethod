@@ -45,13 +45,13 @@
  * La funcion equations_fuezas calcula la fuerza externa
  *
  * @params
- *      masa (int):
+ *      masa (double):
  * masa proporcionada por el usuario dado por el usuario 
- *      Dt(int); 
+ *      Dt(double); 
  *   diferencia de tiempo
- *    K (int):
+ *    K (double):
  *  Constante del bongee
-.*     xt (int)
+.*     xt (double)
  *   posicion 2 segundos atras atras
 
  * @returns
@@ -59,8 +59,7 @@
 */
 
 
-EXTERN double equations_fuerzas(int masa, int Dt, int K, double xt);
-
+EXTERN double equations_fuerzas(double masa, double Dt, double K, double xt);
 /*
  *
  * La funcion equiations_grav regresa el valor de la graverdad por 
@@ -68,7 +67,7 @@ EXTERN double equations_fuerzas(int masa, int Dt, int K, double xt);
  *
  * @params
  *      
- *    Dt(int);
+ *    Dt(double);
  *   diferencial del tiempo
 
  * @returns
@@ -76,7 +75,7 @@ EXTERN double equations_fuerzas(int masa, int Dt, int K, double xt);
 */
 
 
-EXTERN double equations_grav(int Dt);
+EXTERN double equations_grav(double Dt);
 
 /*
  *
@@ -84,18 +83,22 @@ EXTERN double equations_grav(int Dt);
  * necesita el usuario
  *
  * @params
- *      K (int);
+ *      K (double);
  *  contante de elasticidad del bongee
- *      masa (int);
+ *      masa (double);
  *   masa de la persona que esta cayendo
- *      t (int);
+ *      t (double);
  *   tiempo de donde se quirere sacar la posicion
+ *      xt (double)
+ *   posicion anterior
+ *      xt2 (double)
+ *    hace 2 posiciones
  * @returns
  *  double
 */
 
 
-EXTERN double equ(int K, int masa, int t);
+EXTERN double equ(double K, double masa, double t, double xt, double xt2);
 
 #undef equations_IMPORT
 #undef EXTERN
