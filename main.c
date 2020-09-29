@@ -11,13 +11,13 @@
 
 
 int main(void){
-    FILE * arch1,* arch2;
-    int tiempo,k,masa,cont;
+    FILE * arch1, arch2;
+    double tiempo,k,masa,cpu_time,resultado, ant1, ant2;
+    float cont;
     clock_t start, stop;
-    double cpu_time,resultado;
     
     arch1 = fopen("tiempoCPU.csv","w");
-    arch2 = fopen("resultados.csv","w");
+    arch2 = fopen("resultados.csv","a+");
     
     printf("Calculadora de bongee");
     printf("\nCual es la masa del usuario? (kg)\n");
@@ -30,11 +30,11 @@ int main(void){
     
     for(cont = 0; cont <= tiempo; cont ++){
         start = clock();
-        resultado = equ(k,masa,cont);
+        resultado = equ(k,masa,(cont/10));
         stop = clock();
         cpu_time = (stop-start)*1e3 ;
         
-        imprimir(cont,cpu_time,resultado,arch1,arch2);
+        imprimircpu(cont,cpu_time,arch1);
         
     }
     fclose(arch1);
